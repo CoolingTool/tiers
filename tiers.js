@@ -93,6 +93,15 @@ window.addEventListener('load', () => {
 		}
 	});
 
+	document.getElementById('load-img-input').addEventListener('input', () => {
+		let url = prompt('Please provide an image url.');
+		if (url) {
+			let img = create_img_with_src(url);
+			images.appendChild(img);
+			unsaved_changes = true;
+		}
+	});
+
 	document.getElementById('reset-list-input').addEventListener('click', () => {
 		if (confirm('Reset Tierlist? (this will place all images back in the pool)')) {
 			soft_reset_list();
