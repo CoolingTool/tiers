@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
 		}
 	});
 
-	document.getElementById('load-url-input').addEventListener('input', () => {
+	document.getElementById('load-url-input').addEventListener('click', () => {
 		let url = prompt('Please provide an image url.');
 		if (url) {
 			let img = create_img_with_src(url);
